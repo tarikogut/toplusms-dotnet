@@ -22,6 +22,7 @@ public class AppDbContext : DbContext
     public DbSet<PaymentNotification> PaymentNotifications => Set<PaymentNotification>();
     public DbSet<Originator> Originators => Set<Originator>();
     public DbSet<Campaign> Campaigns => Set<Campaign>();
+    public DbSet<TenantAddress> TenantAddresses => Set<TenantAddress>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -42,6 +43,12 @@ public class AppDbContext : DbContext
             e.HasOne(u => u.Tenant).WithMany(t => t.Users).HasForeignKey(u => u.TenantId);
             e.HasOne(u => u.Role).WithMany(r => r.Users).HasForeignKey(u => u.RoleId);
             e.HasOne(u => u.ParentUser).WithMany(u => u.Children).HasForeignKey(u => u.ParentUserId);
+        });
+
+        // TenantAddress
+        modelBuilder.Entity<TenantAddress>(e =>
+        {
+            e.HasOne(a => a.Tenant).WithMany(t => t.Addresses).HasForeignKey(a => a.TenantId);
         });
 
         // Contact

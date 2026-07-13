@@ -24,7 +24,12 @@ public static class DataSeeder
             Code = "HOST",
             Slug = "toplusms",
             Type = "host",
-            Status = "active"
+            Status = "active",
+            TaxNumber = "1234567890",
+            TaxOffice = "Kadıköy VD",
+            CustomerType = "T",
+            Phone = "08501234567",
+            Email = "info@toplusms.link"
         };
         db.Tenants.Add(hostTenant);
         await db.SaveChangesAsync();

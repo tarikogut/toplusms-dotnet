@@ -27,6 +27,25 @@ public class Tenant
 
     public uint? ParentTenantId { get; set; }
 
+    // BTK / vergi bilgileri
+    [MaxLength(50)]
+    public string TaxNumber { get; set; } = string.Empty;
+
+    [MaxLength(100)]
+    public string TaxOffice { get; set; } = string.Empty;
+
+    [MaxLength(11)]
+    public string IdentityNumber { get; set; } = string.Empty;
+
+    [MaxLength(20)]
+    public string CustomerType { get; set; } = "B"; // B=bireysel, T=tuzel
+
+    [MaxLength(20)]
+    public string Phone { get; set; } = string.Empty;
+
+    [MaxLength(255)]
+    public string Email { get; set; } = string.Empty;
+
     public string SettingsJson { get; set; } = "{}";
 
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
@@ -35,4 +54,5 @@ public class Tenant
     public Tenant? ParentTenant { get; set; }
     public ICollection<Tenant> Children { get; set; } = new List<Tenant>();
     public ICollection<User> Users { get; set; } = new List<User>();
+    public ICollection<TenantAddress> Addresses { get; set; } = new List<TenantAddress>();
 }
