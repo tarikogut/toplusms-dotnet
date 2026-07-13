@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "dgSpecHash": "WVYb1pXdNM0=",
+  "success": true,
+  "projectFilePath": "/Users/tarik/projects/smspaneli/src/Toplusms.Services/Toplusms.Services.csproj",
+  "expectedPackageFiles": [
+    "/Users/tarik/.nuget/packages/bcrypt.net-next/4.2.0/bcrypt.net-next.4.2.0.nupkg.sha512",
+    "/Users/tarik/.nuget/packages/microsoft.entityframeworkcore/10.0.9/microsoft.entityframeworkcore.10.0.9.nupkg.sha512",
+    "/Users/tarik/.nuget/packages/microsoft.entityframeworkcore.abstractions/10.0.9/microsoft.entityframeworkcore.abstractions.10.0.9.nupkg.sha512",
+    "/Users/tarik/.nuget/packages/microsoft.entityframeworkcore.analyzers/10.0.9/microsoft.entityframeworkcore.analyzers.10.0.9.nupkg.sha512",
+    "/Users/tarik/.nuget/packages/microsoft.entityframeworkcore.relational/10.0.9/microsoft.entityframeworkcore.relational.10.0.9.nupkg.sha512",
+    "/Users/tarik/.nuget/packages/microsoft.extensions.caching.abstractions/10.0.9/microsoft.extensions.caching.abstractions.10.0.9.nupkg.sha512",
+    "/Users/tarik/.nuget/packages/microsoft.extensions.caching.memory/10.0.9/microsoft.extensions.caching.memory.10.0.9.nupkg.sha512",
+    "/Users/tarik/.nuget/packages/microsoft.extensions.configuration.abstractions/10.0.9/microsoft.extensions.configuration.abstractions.10.0.9.nupkg.sha512",
+    "/Users/tarik/.nuget/packages/microsoft.extensions.dependencyinjection/10.0.9/microsoft.extensions.dependencyinjection.10.0.9.nupkg.sha512",
+    "/Users/tarik/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/10.0.9/microsoft.extensions.dependencyinjection.abstractions.10.0.9.nupkg.sha512",
+    "/Users/tarik/.nuget/packages/microsoft.extensions.logging/10.0.9/microsoft.extensions.logging.10.0.9.nupkg.sha512",
+    "/Users/tarik/.nuget/packages/microsoft.extensions.logging.abstractions/10.0.9/microsoft.extensions.logging.abstractions.10.0.9.nupkg.sha512",
+    "/Users/tarik/.nuget/packages/microsoft.extensions.options/10.0.9/microsoft.extensions.options.10.0.9.nupkg.sha512",
+    "/Users/tarik/.nuget/packages/microsoft.extensions.primitives/10.0.9/microsoft.extensions.primitives.10.0.9.nupkg.sha512",
+    "/Users/tarik/.nuget/packages/npgsql/10.0.3/npgsql.10.0.3.nupkg.sha512",
+    "/Users/tarik/.nuget/packages/npgsql.entityframeworkcore.postgresql/10.0.3/npgsql.entityframeworkcore.postgresql.10.0.3.nupkg.sha512",
+    "/Users/tarik/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/10.0.9/microsoft.netcore.app.runtime.linux-x64.10.0.9.nupkg.sha512",
+    "/Users/tarik/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/10.0.9/microsoft.aspnetcore.app.runtime.linux-x64.10.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}

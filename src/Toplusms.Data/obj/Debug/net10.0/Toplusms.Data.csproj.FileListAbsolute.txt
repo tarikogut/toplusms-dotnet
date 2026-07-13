@@ -1,0 +1,17 @@
+/Users/tarik/projects/smspaneli/src/Toplusms.Data/bin/Debug/net10.0/Toplusms.Data.deps.json
+/Users/tarik/projects/smspaneli/src/Toplusms.Data/bin/Debug/net10.0/Toplusms.Data.runtimeconfig.json
+/Users/tarik/projects/smspaneli/src/Toplusms.Data/bin/Debug/net10.0/Toplusms.Data.dll
+/Users/tarik/projects/smspaneli/src/Toplusms.Data/bin/Debug/net10.0/Toplusms.Data.pdb
+/Users/tarik/projects/smspaneli/src/Toplusms.Data/bin/Debug/net10.0/Toplusms.Models.dll
+/Users/tarik/projects/smspaneli/src/Toplusms.Data/bin/Debug/net10.0/Toplusms.Models.pdb
+/Users/tarik/projects/smspaneli/src/Toplusms.Data/obj/Debug/net10.0/Toplusms.Data.csproj.AssemblyReference.cache
+/Users/tarik/projects/smspaneli/src/Toplusms.Data/obj/Debug/net10.0/Toplusms.Data.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tarik/projects/smspaneli/src/Toplusms.Data/obj/Debug/net10.0/Toplusms.Data.AssemblyInfoInputs.cache
+/Users/tarik/projects/smspaneli/src/Toplusms.Data/obj/Debug/net10.0/Toplusms.Data.AssemblyInfo.cs
+/Users/tarik/projects/smspaneli/src/Toplusms.Data/obj/Debug/net10.0/Toplusms.Data.csproj.CoreCompileInputs.cache
+/Users/tarik/projects/smspaneli/src/Toplusms.Data/obj/Debug/net10.0/Toplusms.3057FC3F.Up2Date
+/Users/tarik/projects/smspaneli/src/Toplusms.Data/obj/Debug/net10.0/Toplusms.Data.dll
+/Users/tarik/projects/smspaneli/src/Toplusms.Data/obj/Debug/net10.0/refint/Toplusms.Data.dll
+/Users/tarik/projects/smspaneli/src/Toplusms.Data/obj/Debug/net10.0/Toplusms.Data.pdb
+/Users/tarik/projects/smspaneli/src/Toplusms.Data/obj/Debug/net10.0/Toplusms.Data.genruntimeconfig.cache
+/Users/tarik/projects/smspaneli/src/Toplusms.Data/obj/Debug/net10.0/ref/Toplusms.Data.dll

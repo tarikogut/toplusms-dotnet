@@ -1,0 +1,85 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h4 class="fw-semibold mb-0">Dashboard</h4>
+    <span class="text-muted" style="font-size:0.85rem">@DateTime.Now.ToString("dd MMMM yyyy HH:mm")</span>
+</div>
+
+<div class="row g-3 mb-4">
+    <div class="col-md-3">
+        <div class="card stat-card p-3">
+            <div class="d-flex align-items-center gap-3">
+                <div class="bg-primary bg-opacity-10 text-primary rounded-3 d-flex align-items-center justify-content-center" style="width:48px;height:48px">
+                    <i class="bi bi-envelope-paper fs-4"></i>
+                </div>
+                <div>
+                    <div class="text-muted" style="font-size:0.8rem">Toplam SMS</div>
+                    <div class="fs-4 fw-bold">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card stat-card p-3">
+            <div class="d-flex align-items-center gap-3">
+                <div class="bg-success bg-opacity-10 text-success rounded-3 d-flex align-items-center justify-content-center" style="width:48px;height:48px">
+                    <i class="bi bi-person-lines-fill fs-4"></i>
+                </div>
+                <div>
+                    <div class="text-muted" style="font-size:0.8rem">Kişi Sayısı</div>
+                    <div class="fs-4 fw-bold">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card stat-card p-3">
+            <div class="d-flex align-items-center gap-3">
+                <div class="bg-warning bg-opacity-10 text-warning rounded-3 d-flex align-items-center justify-content-center" style="width:48px;height:48px">
+                    <i class="bi bi-people-fill fs-4"></i>
+                </div>
+                <div>
+                    <div class="text-muted" style="font-size:0.8rem">Gruplar</div>
+                    <div class="fs-4 fw-bold">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card stat-card p-3">
+            <div class="d-flex align-items-center gap-3">
+                <div class="bg-info bg-opacity-10 text-info rounded-3 d-flex align-items-center justify-content-center" style="width:48px;height:48px">
+                    <i class="bi bi-coin fs-4"></i>
+                </div>
+                <div>
+                    <div class="text-muted" style="font-size:0.8rem">Bakiye</div>
+                    <div class="fs-4 fw-bold">0 TL</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">Son SMS Gönderimleri</div>
+            <div class="card-body">
+                <p class="text-muted mb-0" style="font-size:0.9rem">Henüz SMS gönderilmemiş.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">Hızlı İşlemler</div>
+            <div class="card-body">
+                <div class="d-grid gap-2">
+                    <a href="#" class="btn btn-outline-dark btn-sm text-start"><i class="bi bi-envelope-paper me-2"></i>Tek SMS Gönder</a>
+                    <a href="#" class="btn btn-outline-dark btn-sm text-start"><i class="bi bi-envelopes me-2"></i>Toplu SMS Gönder</a>
+                    <a href="#" class="btn btn-outline-dark btn-sm text-start"><i class="bi bi-person-plus me-2"></i>Kişi Ekle</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

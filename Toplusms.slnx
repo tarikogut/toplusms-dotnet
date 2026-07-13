@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Toplusms.Data/Toplusms.Data.csproj" />
+    <Project Path="src/Toplusms.Models/Toplusms.Models.csproj" />
+    <Project Path="src/Toplusms.Services/Toplusms.Services.csproj" />
+    <Project Path="src/Toplusms.Web/Toplusms.Web.csproj" />
+  </Folder>
+</Solution>

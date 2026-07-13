@@ -1,0 +1,11 @@
+/Users/tarik/projects/smspaneli/src/Toplusms.Models/bin/Debug/net10.0/Toplusms.Models.deps.json
+/Users/tarik/projects/smspaneli/src/Toplusms.Models/bin/Debug/net10.0/Toplusms.Models.dll
+/Users/tarik/projects/smspaneli/src/Toplusms.Models/bin/Debug/net10.0/Toplusms.Models.pdb
+/Users/tarik/projects/smspaneli/src/Toplusms.Models/obj/Debug/net10.0/Toplusms.Models.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tarik/projects/smspaneli/src/Toplusms.Models/obj/Debug/net10.0/Toplusms.Models.AssemblyInfoInputs.cache
+/Users/tarik/projects/smspaneli/src/Toplusms.Models/obj/Debug/net10.0/Toplusms.Models.AssemblyInfo.cs
+/Users/tarik/projects/smspaneli/src/Toplusms.Models/obj/Debug/net10.0/Toplusms.Models.csproj.CoreCompileInputs.cache
+/Users/tarik/projects/smspaneli/src/Toplusms.Models/obj/Debug/net10.0/Toplusms.Models.dll
+/Users/tarik/projects/smspaneli/src/Toplusms.Models/obj/Debug/net10.0/refint/Toplusms.Models.dll
+/Users/tarik/projects/smspaneli/src/Toplusms.Models/obj/Debug/net10.0/Toplusms.Models.pdb
+/Users/tarik/projects/smspaneli/src/Toplusms.Models/obj/Debug/net10.0/ref/Toplusms.Models.dll
