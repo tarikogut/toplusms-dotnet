@@ -10,6 +10,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Services
 builder.Services.AddScoped<AuthService>();
+builder.Services.AddScoped<TenantService>();
 
 // Authentication - Cookie
 builder.Services.AddAuthentication("Cookies")

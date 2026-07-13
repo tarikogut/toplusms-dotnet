@@ -1,0 +1,68 @@
+@model Toplusms.Models.Tenant
+@{
+    ViewData["Title"] = "Yeni Tenant";
+    var allowedTypes = (List<string>)ViewBag.AllowedTypes;
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h4 class="fw-semibold mb-0">Yeni Tenant</h4>
+    <a asp-action="Index" class="btn btn-outline-secondary btn-sm"><i class="bi bi-arrow-left me-1"></i>Geri</a>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <form method="post" asp-action="Create">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label" style="font-size:0.85rem">Tip</label>
+                    <select asp-for="Type" class="form-select" required>
+                        @foreach (var t in allowedTypes)
+                        {
+                            <option value="@t">@(t == "bayi" ? "Bayi" : "Müşteri")</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" style="font-size:0.85rem">Tenant Kodu</label>
+                    <input asp-for="Code" class="form-control" placeholder="ORN01" required />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" style="font-size:0.85rem">Ad / Unvan</label>
+                    <input asp-for="Name" class="form-control" placeholder="Firma Adı" required />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" style="font-size:0.85rem">Vergi No</label>
+                    <input asp-for="TaxNumber" class="form-control" placeholder="VKN / TCKN" />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" style="font-size:0.85rem">Vergi Dairesi</label>
+                    <input asp-for="TaxOffice" class="form-control" placeholder="Örn: Kadıköy VD" />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" style="font-size:0.85rem">Müşteri Tipi</label>
+                    <select asp-for="CustomerType" class="form-select">
+                        <option value="B">Bireysel</option>
+                        <option value="T">Tüzel</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" style="font-size:0.85rem">Telefon</label>
+                    <input asp-for="Phone" class="form-control" placeholder="05XX XXX XX XX" />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" style="font-size:0.85rem">E-posta</label>
+                    <input asp-for="Email" class="form-control" placeholder="ornek@firma.com" />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" style="font-size:0.85rem">Domain (opsiyonel)</label>
+                    <input asp-for="Domain" class="form-control" placeholder="ornek.toplusms.link" />
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <button type="submit" class="btn btn-dark"><i class="bi bi-check-lg me-1"></i>Oluştur</button>
+                <a asp-action="Index" class="btn btn-outline-secondary ms-2">İptal</a>
+            </div>
+        </form>
+    </div>
+</div>

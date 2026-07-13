@@ -1,0 +1,79 @@
+@using System.Security.Claims
+@model List<Toplusms.Models.Tenant>
+@{
+    ViewData["Title"] = "Tenant Yönetimi";
+    var tenantType = User.FindFirst("TenantType")?.Value ?? "";
+    var isHost = tenantType == "host";
+    var isBayi = tenantType == "bayi";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h4 class="fw-semibold mb-0">@(isHost ? "Bayi & Müşteri Yönetimi" : "Müşteri Yönetimi")</h4>
+    <a asp-action="Create" class="btn btn-dark btn-sm"><i class="bi bi-plus-lg me-1"></i>Yeni @(isHost ? "Bayi/Müşteri" : "Müşteri")</a>
+</div>
+
+@if (TempData["Success"] is string success)
+{
+    <div class="alert alert-success py-2" style="font-size:0.85rem">@success</div>
+}
+@if (TempData["Error"] is string error)
+{
+    <div class="alert alert-danger py-2" style="font-size:0.85rem">@error</div>
+}
+
+<div class="card">
+    <div class="card-body p-0">
+        <table class="table table-hover mb-0">
+            <thead class="table-light">
+                <tr>
+                    <th>Kod</th>
+                    <th>Ad</th>
+                    <th>Tip</th>
+                    <th>Vergi No</th>
+                    <th>Telefon</th>
+                    <th>Durum</th>
+                    <th>Oluşturma</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var t in Model)
+                {
+                    <tr>
+                        <td><span class="badge bg-secondary">@t.Code</span></td>
+                        <td>@t.Name</td>
+                        <td>
+                            @switch (t.Type)
+                            {
+                                case "host": <span class="badge bg-dark">Host</span> break;
+                                case "bayi": <span class="badge bg-primary">Bayi</span> break;
+                                case "musteri": <span class="badge bg-info text-dark">Müşteri</span> break;
+                            }
+                        </td>
+                        <td style="font-size:0.85rem">@t.TaxNumber</td>
+                        <td style="font-size:0.85rem">@t.Phone</td>
+                        <td>
+                            @if (t.Status == "active")
+                            {
+                                <span class="badge bg-success">Aktif</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-danger">Pasif</span>
+                            }
+                        </td>
+                        <td style="font-size:0.8rem;color:#64748b">@t.CreatedAt.ToString("dd.MM.yyyy")</td>
+                        <td class="text-end">
+                            <a asp-action="Details" asp-route-id="@t.Id" class="btn btn-sm btn-outline-secondary me-1" title="Detay"><i class="bi bi-eye"></i></a>
+                            <a asp-action="Edit" asp-route-id="@t.Id" class="btn btn-sm btn-outline-primary" title="Düzenle"><i class="bi bi-pencil"></i></a>
+                        </td>
+                    </tr>
+                }
+                @if (Model.Count == 0)
+                {
+                    <tr><td colspan="8" class="text-center text-muted py-4">Henüz tenant bulunmuyor.</td></tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+@model Toplusms.Models.Tenant
+@{
+    ViewData["Title"] = "Tenant Düzenle";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h4 class="fw-semibold mb-0">Tenant Düzenle: @Model.Name</h4>
+    <a asp-action="Index" class="btn btn-outline-secondary btn-sm"><i class="bi bi-arrow-left me-1"></i>Geri</a>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <form method="post" asp-action="Edit">
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="Type" />
+
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label" style="font-size:0.85rem">Tip</label>
+                    <input class="form-control" value="@Model.Type" disabled />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" style="font-size:0.85rem">Tenant Kodu</label>
+                    <input asp-for="Code" class="form-control" required />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" style="font-size:0.85rem">Ad / Unvan</label>
+                    <input asp-for="Name" class="form-control" required />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" style="font-size:0.85rem">Vergi No</label>
+                    <input asp-for="TaxNumber" class="form-control" />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" style="font-size:0.85rem">Vergi Dairesi</label>
+                    <input asp-for="TaxOffice" class="form-control" />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" style="font-size:0.85rem">TCKN</label>
+                    <input asp-for="IdentityNumber" class="form-control" maxlength="11" />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" style="font-size:0.85rem">Müşteri Tipi</label>
+                    <select asp-for="CustomerType" class="form-select">
+                        <option value="B">Bireysel</option>
+                        <option value="T">Tüzel</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" style="font-size:0.85rem">Telefon</label>
+                    <input asp-for="Phone" class="form-control" />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" style="font-size:0.85rem">E-posta</label>
+                    <input asp-for="Email" class="form-control" />
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" style="font-size:0.85rem">Durum</label>
+                    <select asp-for="Status" class="form-select">
+                        <option value="active">Aktif</option>
+                        <option value="passive">Pasif</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label" style="font-size:0.85rem">Domain</label>
+                    <input asp-for="Domain" class="form-control" />
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <button type="submit" class="btn btn-dark"><i class="bi bi-check-lg me-1"></i>Kaydet</button>
+                <a asp-action="Index" class="btn btn-outline-secondary ms-2">İptal</a>
+            </div>
+        </form>
+    </div>
+</div>

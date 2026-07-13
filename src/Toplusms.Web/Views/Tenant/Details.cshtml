@@ -1,0 +1,76 @@
+@model Toplusms.Models.Tenant
+@{
+    ViewData["Title"] = "Tenant Detay";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h4 class="fw-semibold mb-0">Tenant Detay: @Model.Name</h4>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-dark btn-sm"><i class="bi bi-pencil me-1"></i>Düzenle</a>
+        <a asp-action="Index" class="btn btn-outline-secondary btn-sm ms-1"><i class="bi bi-arrow-left me-1"></i>Geri</a>
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">Genel Bilgiler</div>
+            <div class="card-body">
+                <table class="table table-sm mb-0">
+                    <tr><th style="width:140px">Kod</th><td><span class="badge bg-secondary">@Model.Code</span></td></tr>
+                    <tr><th>Ad / Unvan</th><td>@Model.Name</td></tr>
+                    <tr><th>Tip</th><td>@Model.Type</td></tr>
+                    <tr><th>Durum</th><td>@(Model.Status == "active" ? "Aktif" : "Pasif")</td></tr>
+                    <tr><th>Domain</th><td>@Model.Domain</td></tr>
+                    <tr><th>Oluşturma</th><td>@Model.CreatedAt.ToString("dd.MM.yyyy HH:mm")</td></tr>
+                    @if (Model.ParentTenant != null)
+                    {
+                        <tr><th>Üst Tenant</th><td>@Model.ParentTenant.Name</td></tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">Vergi / İletişim</div>
+            <div class="card-body">
+                <table class="table table-sm mb-0">
+                    <tr><th style="width:140px">Vergi No</th><td>@Model.TaxNumber</td></tr>
+                    <tr><th>Vergi Dairesi</th><td>@Model.TaxOffice</td></tr>
+                    <tr><th>TCKN</th><td>@Model.IdentityNumber</td></tr>
+                    <tr><th>Müşteri Tipi</th><td>@(Model.CustomerType == "T" ? "Tüzel" : "Bireysel")</td></tr>
+                    <tr><th>Telefon</th><td>@Model.Phone</td></tr>
+                    <tr><th>E-posta</th><td>@Model.Email</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (Model.Addresses?.Count > 0)
+{
+    <div class="card mt-3">
+        <div class="card-header">Adresler</div>
+        <div class="card-body p-0">
+            <table class="table table-sm mb-0">
+                <thead class="table-light">
+                    <tr><th>Tip</th><th>İl</th><th>İlçe</th><th>Mahalle</th><th>Cadde</th><th>No</th></tr>
+                </thead>
+                <tbody>
+                    @foreach (var addr in Model.Addresses)
+                    {
+                        <tr>
+                            <td><span class="badge bg-secondary">@addr.Type</span></td>
+                            <td>@addr.Province</td>
+                            <td>@addr.District</td>
+                            <td>@addr.Neighborhood</td>
+                            <td>@addr.Street</td>
+                            <td>@addr.BuildingNo@(string.IsNullOrEmpty(addr.ApartmentNo) ? "" : "/" + addr.ApartmentNo)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
