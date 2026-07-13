@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Toplusms.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a017353b38542aedacbbdeaa9c3104559632b5f7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6548d448c0337c62db89ff1bb58f2b80d064cca")]
 [assembly: System.Reflection.AssemblyProductAttribute("Toplusms.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Toplusms.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

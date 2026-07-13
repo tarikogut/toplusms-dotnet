@@ -84,6 +84,70 @@ public static class DataSeeder
             HolderName = "Toplusms"
         });
         await db.SaveChangesAsync();
+
+        // Demo bayi tenant
+        var bayiTenant = new Tenant
+        {
+            Domain = "bayi01.toplusms.link",
+            Name = "Test Bayi",
+            Code = "BAYI01",
+            Slug = "test-bayi",
+            Type = "bayi",
+            Status = "active",
+            ParentTenantId = hostTenant.Id,
+            TaxNumber = "9876543210",
+            TaxOffice = "Üsküdar VD",
+            CustomerType = "T",
+            Phone = "05321112233",
+            Email = "bayi@test.com"
+        };
+        db.Tenants.Add(bayiTenant);
+        await db.SaveChangesAsync();
+
+        // Demo musteri tenant (under bayit)
+        var musteriTenant = new Tenant
+        {
+            Domain = "mus01.toplusms.link",
+            Name = "Test Müşteri",
+            Code = "MUS01",
+            Slug = "test-musteri",
+            Type = "musteri",
+            Status = "active",
+            ParentTenantId = bayiTenant.Id,
+            CustomerType = "B",
+            Phone = "05441112233",
+            Email = "musteri@test.com"
+        };
+        db.Tenants.Add(musteriTenant);
+        await db.SaveChangesAsync();
+
+        // Bayi kullanıcısı
+        db.Users.Add(new User
+        {
+            TenantId = bayiTenant.Id,
+            Username = "bayi",
+            PasswordHash = BCrypt.Net.BCrypt.HashPassword("admin123"),
+            Name = "Bayi",
+            Surname = "Kullanıcı",
+            Email = "bayi@test.com",
+            RoleId = bayiRole.Id,
+            Status = "active"
+        });
+        await db.SaveChangesAsync();
+
+        // Müşteri kullanıcısı (alt tenant)
+        db.Users.Add(new User
+        {
+            TenantId = musteriTenant.Id,
+            Username = "musteri",
+            PasswordHash = BCrypt.Net.BCrypt.HashPassword("admin123"),
+            Name = "Müşteri",
+            Surname = "Kullanıcı",
+            Email = "musteri@test.com",
+            RoleId = musteriRole.Id,
+            Status = "active"
+        });
+        await db.SaveChangesAsync();
     }
 
     private static async Task SeedBtkReferencesAsync(AppDbContext db)
