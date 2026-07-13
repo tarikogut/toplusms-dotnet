@@ -23,6 +23,11 @@ public class AppDbContext : DbContext
     public DbSet<Originator> Originators => Set<Originator>();
     public DbSet<Campaign> Campaigns => Set<Campaign>();
     public DbSet<TenantAddress> TenantAddresses => Set<TenantAddress>();
+    public DbSet<Occupation> Occupations => Set<Occupation>();
+    public DbSet<IdentityType> IdentityTypes => Set<IdentityType>();
+    public DbSet<ServiceType> ServiceTypes => Set<ServiceType>();
+    public DbSet<LineStatus> LineStatuses => Set<LineStatus>();
+    public DbSet<CustomerMovement> CustomerMovements => Set<CustomerMovement>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
