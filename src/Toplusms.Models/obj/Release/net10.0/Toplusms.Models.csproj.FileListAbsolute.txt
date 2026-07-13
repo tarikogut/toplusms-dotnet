@@ -9,3 +9,4 @@
 /Users/tarik/projects/smspaneli/src/Toplusms.Models/obj/Release/net10.0/refint/Toplusms.Models.dll
 /Users/tarik/projects/smspaneli/src/Toplusms.Models/obj/Release/net10.0/Toplusms.Models.pdb
 /Users/tarik/projects/smspaneli/src/Toplusms.Models/obj/Release/net10.0/ref/Toplusms.Models.dll
+/Users/tarik/projects/smspaneli/src/Toplusms.Models/obj/Release/net10.0/Toplusms.Models.sourcelink.json

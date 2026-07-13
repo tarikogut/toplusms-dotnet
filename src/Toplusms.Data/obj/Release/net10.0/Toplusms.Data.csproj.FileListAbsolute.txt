@@ -15,3 +15,4 @@
 /Users/tarik/projects/smspaneli/src/Toplusms.Data/obj/Release/net10.0/Toplusms.Data.pdb
 /Users/tarik/projects/smspaneli/src/Toplusms.Data/obj/Release/net10.0/Toplusms.Data.genruntimeconfig.cache
 /Users/tarik/projects/smspaneli/src/Toplusms.Data/obj/Release/net10.0/ref/Toplusms.Data.dll
+/Users/tarik/projects/smspaneli/src/Toplusms.Data/obj/Release/net10.0/Toplusms.Data.sourcelink.json

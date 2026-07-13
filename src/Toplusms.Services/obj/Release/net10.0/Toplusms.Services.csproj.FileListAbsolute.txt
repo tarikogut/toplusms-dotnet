@@ -15,3 +15,4 @@
 /Users/tarik/projects/smspaneli/src/Toplusms.Services/obj/Release/net10.0/refint/Toplusms.Services.dll
 /Users/tarik/projects/smspaneli/src/Toplusms.Services/obj/Release/net10.0/Toplusms.Services.pdb
 /Users/tarik/projects/smspaneli/src/Toplusms.Services/obj/Release/net10.0/ref/Toplusms.Services.dll
+/Users/tarik/projects/smspaneli/src/Toplusms.Services/obj/Release/net10.0/Toplusms.Services.sourcelink.json

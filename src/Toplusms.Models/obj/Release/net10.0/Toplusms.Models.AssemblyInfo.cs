@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Toplusms.Models")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a820af84eb3f852fc8aed3b22a03fb36d53550d4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Toplusms.Models")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Toplusms.Models")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

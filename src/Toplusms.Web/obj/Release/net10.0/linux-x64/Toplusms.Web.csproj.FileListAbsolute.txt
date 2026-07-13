@@ -521,3 +521,4 @@
 /Users/tarik/projects/smspaneli/src/Toplusms.Web/obj/Release/net10.0/linux-x64/Toplusms.Web.pdb
 /Users/tarik/projects/smspaneli/src/Toplusms.Web/obj/Release/net10.0/linux-x64/Toplusms.Web.genruntimeconfig.cache
 /Users/tarik/projects/smspaneli/src/Toplusms.Web/obj/Release/net10.0/linux-x64/ref/Toplusms.Web.dll
+/Users/tarik/projects/smspaneli/src/Toplusms.Web/obj/Release/net10.0/linux-x64/Toplusms.Web.sourcelink.json
