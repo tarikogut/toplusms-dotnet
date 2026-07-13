@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Toplusms.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a820af84eb3f852fc8aed3b22a03fb36d53550d4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3df0fc2a540ade0135ff8b87ab5817be9b4007ce")]
 [assembly: System.Reflection.AssemblyProductAttribute("Toplusms.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Toplusms.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

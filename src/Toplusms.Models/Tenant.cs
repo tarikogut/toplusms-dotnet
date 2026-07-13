@@ -13,6 +13,9 @@ public class Tenant
     [Required, MaxLength(255)]
     public string Name { get; set; } = string.Empty;
 
+    [MaxLength(50)]
+    public string Code { get; set; } = string.Empty;
+
     [MaxLength(100)]
     public string Slug { get; set; } = string.Empty;
 

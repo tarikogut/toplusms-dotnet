@@ -21,6 +21,7 @@ public static class DataSeeder
         {
             Domain = "toplusms.link",
             Name = "Toplusms",
+            Code = "HOST",
             Slug = "toplusms",
             Type = "host",
             Status = "active"

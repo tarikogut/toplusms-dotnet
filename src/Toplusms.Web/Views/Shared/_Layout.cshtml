@@ -2,6 +2,11 @@
 @{
     var role = User.FindFirst(ClaimTypes.Role)?.Value ?? "";
     var fullName = User.FindFirst("FullName")?.Value ?? User.Identity?.Name ?? "";
+    var tenantType = User.FindFirst("TenantType")?.Value ?? "";
+    var tenantCode = User.FindFirst("TenantCode")?.Value ?? "";
+    var isHost = tenantType == "host";
+    var isBayi = tenantType == "bayi";
+    var isMusteri = tenantType == "musteri";
 }
 <!DOCTYPE html>
 <html lang="tr">
@@ -56,19 +61,19 @@
             <a class="nav-link" href="#"><i class="bi bi-person-lines-fill"></i> Kişiler</a>
             <a class="nav-link" href="#"><i class="bi bi-people-fill"></i> Gruplar</a>
 
-            <div class="section-title">Hesap Yönetimi</div>
-            <a class="nav-link" href="#"><i class="bi bi-person-circle"></i> Profil</a>
-            <a class="nav-link" href="#"><i class="bi bi-shield-lock"></i> Şifre Değiştir</a>
-            <a class="nav-link" href="#"><i class="bi bi-phone-flip"></i> Başlıklar</a>
-            <a class="nav-link" href="#"><i class="bi bi-shield-exclamation"></i> Kara Liste</a>
-            <a class="nav-link" href="#"><i class="bi bi-file-text"></i> SMS Şablonları</a>
-            <a class="nav-link" href="#"><i class="bi bi-file-earmark-text"></i> Yasal Belgeler</a>
+                <div class="section-title">Hesap Yönetimi</div>
+                <a class="nav-link" href="#"><i class="bi bi-person-circle"></i> Profil</a>
+                <a class="nav-link" href="#"><i class="bi bi-shield-lock"></i> Şifre Değiştir</a>
+                <a class="nav-link" href="#"><i class="bi bi-phone-flip"></i> Başlıklar</a>
+                <a class="nav-link" href="#"><i class="bi bi-shield-exclamation"></i> Kara Liste</a>
+                <a class="nav-link" href="#"><i class="bi bi-file-text"></i> SMS Şablonları</a>
+                <a class="nav-link" href="#"><i class="bi bi-file-earmark-text"></i> Yasal Belgeler</a>
 
-            @if (role == "admin" || role == "bayi")
-            {
-                <div class="section-title">Bayi Yönetimi</div>
-                <a class="nav-link" href="#"><i class="bi bi-diagram-3-fill"></i> Bayiler</a>
-            }
+                @if (isHost || isBayi)
+                {
+                    <div class="section-title">@(isHost ? "Bayi Yönetimi" : "Müşteri Yönetimi")</div>
+                    <a class="nav-link" href="#"><i class="bi bi-diagram-3-fill"></i> @(isHost ? "Bayiler" : "Müşteriler")</a>
+                }
         </nav>
     </div>
 
@@ -76,7 +81,7 @@
         <div class="topbar">
             <div class="fw-semibold">Toplusms.link</div>
             <div class="d-flex align-items-center gap-3">
-                <span style="font-size:0.85rem;color:#64748b">@fullName · @role</span>
+                <span style="font-size:0.85rem;color:#64748b">@fullName · @role · @tenantCode</span>
                 <form asp-controller="Login" asp-action="Logout" method="post" style="display:inline">
                     <button type="submit" class="btn btn-sm btn-outline-secondary">Çıkış</button>
                 </form>

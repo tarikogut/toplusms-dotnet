@@ -193,3 +193,4 @@
 /Users/tarik/projects/smspaneli/src/Toplusms.Web/obj/Debug/net10.0/Toplusms.Web.genruntimeconfig.cache
 /Users/tarik/projects/smspaneli/src/Toplusms.Web/obj/Debug/net10.0/ref/Toplusms.Web.dll
 /Users/tarik/projects/smspaneli/src/Toplusms.Web/bin/Debug/net10.0/BCrypt-Net-Next.dll
+/Users/tarik/projects/smspaneli/src/Toplusms.Web/obj/Debug/net10.0/Toplusms.Web.sourcelink.json

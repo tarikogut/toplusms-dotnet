@@ -25,10 +25,10 @@ public class AuthService
         return user;
     }
 
-    public async Task<Tenant?> ResolveTenantAsync(string? host)
+    public async Task<Tenant?> ResolveTenantAsync(string code)
     {
-        if (string.IsNullOrEmpty(host)) return null;
-        return await _db.Tenants.FirstOrDefaultAsync(t => t.Domain == host && t.Status == "active");
+        if (string.IsNullOrEmpty(code)) return null;
+        return await _db.Tenants.FirstOrDefaultAsync(t => t.Code == code && t.Status == "active");
     }
 
     public async Task<User?> GetByIdAsync(uint id)

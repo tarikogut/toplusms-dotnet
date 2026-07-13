@@ -24,14 +24,13 @@ public class LoginController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Index(string username, string password)
+    public async Task<IActionResult> Index(string code, string username, string password)
     {
-        // Resolve tenant from domain
-        var host = Request.Host.Host;
-        var tenant = await _auth.ResolveTenantAsync(host);
+        // Resolve tenant by code
+        var tenant = await _auth.ResolveTenantAsync(code);
         if (tenant == null)
         {
-            ModelState.AddModelError("", "Invalid domain");
+            ModelState.AddModelError("", "Geçersiz tenant kodu");
             return View();
         }
 
@@ -47,6 +46,8 @@ public class LoginController : Controller
             new(ClaimTypes.NameIdentifier, user.Id.ToString()),
             new(ClaimTypes.Name, user.Username),
             new("TenantId", user.TenantId.ToString()),
+            new("TenantType", tenant.Type),
+            new("TenantCode", tenant.Code),
             new(ClaimTypes.Role, user.Role?.Name ?? ""),
             new("FullName", $"{user.Name} {user.Surname}".Trim()),
         };

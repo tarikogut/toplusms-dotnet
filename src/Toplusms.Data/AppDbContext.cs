@@ -31,6 +31,7 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<Tenant>(e =>
         {
             e.HasIndex(t => t.Domain).IsUnique();
+            e.HasIndex(t => t.Code).IsUnique();
             e.HasMany(t => t.Children).WithOne(t => t.ParentTenant).HasForeignKey(t => t.ParentTenantId);
         });
 
